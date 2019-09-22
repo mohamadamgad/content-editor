@@ -6,8 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public mode = 'editor';
   title = 'content-editor';
-  markdown = '';
-
 }

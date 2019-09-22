@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +10,8 @@ import { AppComponent } from './app.component';
 import { MarkdownModule } from 'ngx-markdown';
 import { LMarkdownEditorModule } from 'ngx-markdown-editor';
 import { ContentEditorComponent } from './components/content-editor/content-editor.component';
+import {DropdownModule} from 'primeng/dropdown';
+
 
 
 @NgModule({
@@ -20,8 +23,10 @@ import { ContentEditorComponent } from './components/content-editor/content-edit
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    BrowserAnimationsModule,
     MarkdownModule.forRoot(),
-    LMarkdownEditorModule
+    LMarkdownEditorModule,
+    DropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]

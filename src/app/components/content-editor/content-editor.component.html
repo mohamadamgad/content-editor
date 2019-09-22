@@ -1,3 +1,7 @@
-<p>
-  content-editor works!
-</p>
+<p-dropdown (onChange)="templateSelected($event)" [options]="templates" placeholder="Select Template" [(ngModel)]="selectedTemplate" [showClear]="true"></p-dropdown>
+
+
+<div>
+    <textarea class="variable-textarea" [(ngModel)]="markdown"></textarea>
+    <markdown class="variable-binding" [data]="markdown"></markdown>
+</div>

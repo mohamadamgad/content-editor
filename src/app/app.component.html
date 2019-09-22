@@ -1,27 +1,2 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<textarea class="variable-textarea" [(ngModel)]="markdown"></textarea>
-<markdown class="variable-binding" [data]="markdown"></markdown>
-
-<!-- <md-editor name="markdown" 
-  [(ngModel)]="markdown" 
-  [mode]="mode" 
-  [height]="'500px'" 
-  required 
-  maxlength="500"
-  hideToolbar = true
-
-  >
-</md-editor> -->
-<!-- <button class="btn btn-default btn-primary" (click)="changeMode()">Change Mode (Current: {{ mode }})</button> -->
-
-
-
-<!-- <div style="margin: 20px">
-    <form novalidate #form="ngForm">
-      <md-editor #md="ngModel" showBorder = true usingFontAwesome5 = true hideToolbar = true name="Content" [upload]="doUpload" [(ngModel)]="content" [mode]="mode" [options]="options"
-        required maxlength="600" height="400px"></md-editor>
-    </form>
-  </div> -->
+<app-content-editor></app-content-editor>
 <router-outlet></router-outlet>
-
-<!-- <markdown class="variable-binding" [data]="markdown"></markdown> -->
