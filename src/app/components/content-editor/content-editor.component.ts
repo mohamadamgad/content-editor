@@ -8,8 +8,9 @@ import { ContentEditor } from './content-editor.enum';
   styleUrls: ['./content-editor.component.scss']
 })
 export class ContentEditorComponent implements OnInit {
-  markdown = '# Content Editor \n' +
-   'If you want to play with Markdown, you can edit me';
+  markdown =
+    '# Content Editor \n' +
+    'If you want to play with Markdown, you can edit me';
   templates: SelectItem[];
 
   constructor() {}
@@ -24,10 +25,9 @@ export class ContentEditorComponent implements OnInit {
   }
 
   public templateSelected(event) {
-    console.log('aaaaaaaaaa', event);
     if (event.value === null) {
-        this.markdown = '';
-        return;
+      this.markdown = '';
+      return;
     }
     if (event.value.name === 'Headers') {
       this.markdown = ContentEditor.HEADER;

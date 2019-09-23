@@ -8,7 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { MarkdownModule } from 'ngx-markdown';
-import { LMarkdownEditorModule } from 'ngx-markdown-editor';
 import { ContentEditorComponent } from './components/content-editor/content-editor.component';
 import {DropdownModule} from 'primeng/dropdown';
 
@@ -25,7 +24,6 @@ import {DropdownModule} from 'primeng/dropdown';
     FormsModule,
     BrowserAnimationsModule,
     MarkdownModule.forRoot(),
-    LMarkdownEditorModule,
     DropdownModule
   ],
   providers: [],
