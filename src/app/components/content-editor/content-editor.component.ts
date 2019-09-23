@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SelectItem } from 'primeng/api';
+import { ContentEditor } from './content-editor.enum';
 
 @Component({
   selector: 'app-content-editor',
@@ -7,7 +8,8 @@ import { SelectItem } from 'primeng/api';
   styleUrls: ['./content-editor.component.scss']
 })
 export class ContentEditorComponent implements OnInit {
-  markdown = '';
+  markdown = '# Content Editor \n' +
+   'If you want to play with Markdown, you can edit me';
   templates: SelectItem[];
 
   constructor() {}
@@ -22,20 +24,23 @@ export class ContentEditorComponent implements OnInit {
   }
 
   public templateSelected(event) {
-    console.log('aaaaaaaaaa', event.value.name);
+    console.log('aaaaaaaaaa', event);
+    if (event.value === null) {
+        this.markdown = '';
+        return;
+    }
     if (event.value.name === 'Headers') {
-      this.markdown =
-        '# H1 ' + '## H2' + '### H3 ' + '#### H4 ' + '##### H5 ' + '###### H6';
+      this.markdown = ContentEditor.HEADER;
     }
     if (event.value.name === 'Lists') {
-      this.markdown = '';
+      this.markdown = ContentEditor.LIST;
     }
 
     if (event.value.name === 'Code') {
-      this.markdown = '';
+      this.markdown = ContentEditor.CODE;
     }
     if (event.value.name === 'Tables') {
-      this.markdown = '';
+      this.markdown = ContentEditor.TABLE;
     }
   }
 }
